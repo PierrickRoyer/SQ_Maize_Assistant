@@ -17,7 +17,7 @@ def compare_sim_vs_sim_var(df1, df2, name1, name2, var, uniqueID):
     unique_ids = merged_df['TRT_NAME'].unique()
     colors = plt.cm.get_cmap('viridis', len(unique_ids))
     color_mapping = {cul_id: colors(i) for i, cul_id in enumerate(unique_ids)}
-    merged_df = merged_df.loc[merged_df['TRT_NAME'] == 'CAR2017WD']
+
     # Plot with the mapped colors
     plt.scatter(merged_df[var + '_' + name1], merged_df[var + '_' + name2],
                 color=[color_mapping[c] for c in merged_df['TRT_NAME']], alpha=0.6)

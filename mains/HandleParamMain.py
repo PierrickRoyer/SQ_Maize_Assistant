@@ -6,7 +6,7 @@ import Constant
 
 
     ##Get potential non-var Param
-"""
+
 result_dict = HandleParam.process_all_sqvarm_files(Constant.pathParameters)
 
 # Convert the result dictionary to a DataFrame
@@ -17,8 +17,8 @@ excluded_df =  HandleParam.create_excluded_columns_df(df,filtered_df)
 print(df)
 
 excluded_df = excluded_df.transpose()
-excluded_df.to_csv( Constant.pathMyOutput + '\compareParam/potentialNonVarietal_Param_PG_INVITE.csv', sep =';')
+#excluded_df.to_csv( Constant.pathMyOutput + '\compareParam/potentialNonVarietal_Param_PG_INVITE.csv', sep =';')
 
 filtered_df = filtered_df.transpose()
-filtered_df.to_csv(Constant.pathMyOutput + '\compareParam/constantNonVarietalParam_PG_INVITE.csv', sep =';')
-"""
+#filtered_df.to_csv(Constant.pathMyOutput + '\compareParam/constantNonVarietalParam_PG_INVITE.csv', sep =';')
+
