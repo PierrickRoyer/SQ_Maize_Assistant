@@ -92,6 +92,24 @@ def process_all_sqvarm_files(root_dir):
 
     return result_dict
 
+# Function to read the XML file, remove a specific parameter, and return the modified tree
+def read_and_remove_parameter(file_path, param_to_remove):
+    parser = etree.XMLParser(remove_blank_text=True)
+    tree = etree.parse(file_path, parser)
+    root = tree.getroot()
+
+    # Loop through each genotype (CropParameterItem)
+    for item in root.xpath('//CropParameterItem'):
+        # Loop through each parameter under ParamValue and remove the one to delete
+        for param in item.xpath('ParamValue/Item'):
+            key = param.xpath('Key/string')[0].text  # Parameter name
+            if key == param_to_remove:
+                parent = param.getparent()
+                parent.remove(param)
+                break  # Assuming you only want to remove one instance
+
+    return tree
+
 # Function to convert the result dictionary to a DataFrame
 def convert_result_to_df(result_dict):
     # Create a list of Series to concatenate later
