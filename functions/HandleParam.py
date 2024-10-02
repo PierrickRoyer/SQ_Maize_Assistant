@@ -50,7 +50,7 @@ def read_genotype_parameters(file_path):
             value = float(param.xpath('Value/double')[0].text)  # Parameter value as float
             genotype_params[genotype][key] = value
 
-    return genotype_params
+    return genotype_params,tree
 # Function to find common parameters across genotypes with the same value
 def find_common_parameters(genotype_params):
     # Dictionary to track potential common parameters and their value
@@ -81,7 +81,7 @@ def process_all_sqvarm_files(root_dir):
                 print(f"Processing: {file_path}")
 
                 # Read the parameters for each genotype
-                genotype_params = read_genotype_parameters(file_path)
+                genotype_params, _ = read_genotype_parameters(file_path)
 
                 # Find common parameters with the same value across all genotypes
                 common_params = find_common_parameters(genotype_params)
@@ -151,4 +151,61 @@ def create_excluded_columns_df(original_df, filtered_df):
     excluded_df = original_df.drop(columns=excluded_columns, errors='ignore')
 
     return excluded_df
-# Example usage
+
+# Function to remove parameters from B that are not in A
+def remove_extra_parameters_in_B(tree_B, params_A):
+    root_B = tree_B.getroot()
+
+    # Iterate through each genotype in file B
+    for item in root_B.xpath('//CropParameterItem'):
+        for param in item.xpath('ParamValue/Item'):
+            key = param.xpath('Key/string')[0].text
+            if key not in params_A[next(iter(params_A))]:  # If param not in A, remove it
+                parent = param.getparent()
+                parent.remove(param)
+
+    return tree_B
+# Function to add missing parameters from A to B with the average value from A
+def add_missing_parameters_in_B(tree_B, avg_values_to_add):
+    root_B = tree_B.getroot()
+
+    # Iterate through each genotype in file B and add missing parameters
+    for item in root_B.xpath('//CropParameterItem'):
+        for param_name, avg_value in avg_values_to_add.items():
+            # Check if the parameter is missing in the genotype
+            existing_keys = {param.xpath('Key/string')[0].text for param in item.xpath('ParamValue/Item')}
+            if param_name not in existing_keys:
+                # Create a new parameter element and add it to the genotype
+                new_param = etree.Element("Item")
+                key = etree.SubElement(new_param, "Key")
+                key_string = etree.SubElement(key, "string")
+                key_string.text = param_name
+
+                value = etree.SubElement(new_param, "Value")
+                value_double = etree.SubElement(value, "double")
+                value_double.text = str(avg_value)
+
+                # Append the new parameter to the ParamValue section
+                item.find('ParamValue').append(new_param)
+
+    return tree_B
+
+# Main function to process and sync files A and B
+def sync_files_A_and_B(file_A, file_B, output_file_B):
+    # Read parameters from both files
+    params_A, _ = read_genotype_parameters(file_A)
+    params_B, tree_B = read_genotype_parameters(file_B)
+
+    # Remove parameters from B that are not in A
+    modified_tree_B = remove_extra_parameters_in_B(tree_B, params_A)
+
+    # Calculate the average values of parameters in A that need to be added to B
+    avg_values_to_add = {}
+    for param in (set(params_A[next(iter(params_A))].keys()) - set(params_B[next(iter(params_B))].keys())):
+        avg_values_to_add[param] = sum(genotype[param] for genotype in params_A.values() if param in genotype) / len(params_A)
+
+    # Add missing parameters to B from A
+    modified_tree_B = add_missing_parameters_in_B(modified_tree_B, avg_values_to_add)
+
+    # Rewrite the modified XML tree for B to the specified output file
+    rewrite_xml(modified_tree_B, output_file_B)
