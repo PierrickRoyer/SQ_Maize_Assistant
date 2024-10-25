@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1063bba6-3dd3-416d-ae94-7e814d86c3ba" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/classes/InputFileSQ.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/ProjectIterator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mains/Runner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mains/ScratchRun.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mains/ScratchTT.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mains/reverseTranslateSoil.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Constant.py" beforeDir="false" afterPath="$PROJECT_DIR$/Constant.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functions/HandleParam.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions/HandleParam.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mains/HandleParamMain.py" beforeDir="false" afterPath="$PROJECT_DIR$/mains/HandleParamMain.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mains/SimVsSim.py" beforeDir="false" afterPath="$PROJECT_DIR$/mains/SimVsSim.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mains/reverseTranslateManagement.py" beforeDir="false" afterPath="$PROJECT_DIR$/mains/reverseTranslateManagement.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +45,9 @@
     &quot;accountId&quot;: &quot;d1b832b1-ed01-4b5c-af91-ea6a81e6371d&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/mains/HandleParamMain.py" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -55,17 +66,44 @@
   &quot;keyToString&quot;: {
     &quot;Python.Compare.executor&quot;: &quot;Run&quot;,
     &quot;Python.Constant.executor&quot;: &quot;Run&quot;,
+    &quot;Python.HandleParam.executor&quot;: &quot;Run&quot;,
     &quot;Python.HandleParamMain (1).executor&quot;: &quot;Run&quot;,
     &quot;Python.LoadTransform.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Runner.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ScratchRun.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ScratchTT.executor&quot;: &quot;Run&quot;,
     &quot;Python.SimVsSim.executor&quot;: &quot;Run&quot;,
     &quot;Python.compareParameters.executor&quot;: &quot;Run&quot;,
     &quot;Python.reverseTranslateManagement.executor&quot;: &quot;Run&quot;,
+    &quot;Python.reverseTranslateSoil.executor&quot;: &quot;Run&quot;,
     &quot;Python.test.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.HandleParamMain (1)">
+  <component name="RunManager" selected="Python.Runner">
+    <configuration name="HandleParam" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SQ_Maize_Assistant" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/functions" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/functions/HandleParam.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="HandleParamMain (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SQ_Maize_Assistant" />
       <option name="ENV_FILES" value="" />
@@ -88,7 +126,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="HandleParamMain" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Runner" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SQ_Maize_Assistant" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -101,7 +139,29 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\royerpie\Documents\rootDoc\automate\script\SQ_Maize_Assistant\mains\HandleParamMain.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mains/Runner.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ScratchRun" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SQ_Maize_Assistant" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mains" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mains/ScratchRun.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -132,64 +192,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="reverseTranslateManagement" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="SQ_Maize_Assistant" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mains" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mains/reverseTranslateManagement.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="reverseTranslateWheather" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="SQ_Maize_Assistant" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mains" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\royerpie\Documents\rootDoc\automate\script\SQ_Maize_Assistant\mains\reverseTranslateWheather.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Runner" />
+        <item itemvalue="Python.ScratchRun" />
         <item itemvalue="Python.HandleParamMain (1)" />
-        <item itemvalue="Python.HandleParamMain" />
+        <item itemvalue="Python.HandleParam" />
         <item itemvalue="Python.SimVsSim" />
-        <item itemvalue="Python.reverseTranslateManagement" />
-        <item itemvalue="Python.reverseTranslateWheather" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-884f5ed5d46b-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.22855.92" />
+        <option value="bundled-python-sdk-0e3be3396995-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23339.19" />
       </set>
     </attachedChunks>
   </component>

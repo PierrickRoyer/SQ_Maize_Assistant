@@ -19,10 +19,10 @@ print(myArva_Ju_2_1_1[['ADAT','MDAT']])
 
 outputDF = Compare.compare_sim_vs_sim_list(oldArva_Ju_2_1_1,myArva_Ju_2_1_1,'oldJugu','newPierrick',Constant.varJugurta,['RUID','TRT_NAME'])
 outputDF.to_csv(Constant.pathSimvsSimOutput + 'Invite_Jugurta_2.1.1/ARVA_2.csv', sep =';')
+
 """
-
     ##compare PG / Pierrick 2.0.0
-
+"""
 old = pd.read_csv("C:/Users/royerpie/Documents/rootDoc/results/simVsSimDf/PG_Pierrick_old.csv", sep = ';', encoding = 'latin1')
 print(old[['PDATE', 'ADAT', 'MDAT']])
 old = LoadTransform.convert_date_columns(old, '%d/%m/%Y')
@@ -36,7 +36,7 @@ outputDF.to_csv(Constant.pathSimvsSimOutput + 'PG_pierrick_reversed.csv', sep ='
 
 
 
-
+"""
     ##compare PG / Jugurta 2.1.1
 """
 currPathNewOutput = Constant.pathMyOutput + 'PG_Jugurta_2.1.1/PG_Jugurta_1_edit.csv'
