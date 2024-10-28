@@ -6,3 +6,6 @@ pathParameters =  "C:/Users/royerpie/Documents/rootDoc/automate/parameters/"
 pathProjectCross = "C:/Users/royerpie\Documents/rootDoc\Working_Immuable\myProject\cross/"
 
 varJugurta = ["SilkD","ADAT","MDAT","LAIX","LAIA","HnoAM","GWGM"]
+
+
+SQpath = 'C:/Users/royerpie/Source/Repos/SiriusCode/Code/SiriusConsole/bin/Debug/SiriusQuality-Console.exe'

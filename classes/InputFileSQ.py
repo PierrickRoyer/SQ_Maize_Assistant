@@ -153,7 +153,7 @@ class Run(InputFileSQ):
             output_directory_elem.text = output_run_dir  # Adjust as needed
 
             output_pattern_elem = ET.SubElement(multi_elem, 'OutputPattern')
-            output_pattern_elem.text = '$(RunName)|$('  # Adjust as needed
+            output_pattern_elem.text = run_name  # Adjust as needed
 
             # Create MultiRunsArray element
             multi_runs_array_elem = ET.SubElement(multi_elem, 'MultiRunsArray')
@@ -166,7 +166,8 @@ class Run(InputFileSQ):
                 for col, value in row.items():
                     sub_elem = ET.SubElement(multi_run_item_elem, col)
                     sub_elem.text = str(value)
-
+            dailyoutput_directory_elem = ET.SubElement(multi_elem, 'DailyOutputPattern')
+            dailyoutput_directory_elem.text = "$(VarietyName)||$(ManagementName)"  # Adjust as needed
         return run_file_elem
 
     def save_xml(self, output_file,output_run_dir):
