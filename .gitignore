@@ -1,0 +1,4 @@
+.venv/              # Ignores your virtual environment
+data_pickle/        # Ignores the entire data_pickle directory
+*.pyc               # Ignores Python compiled files
+__pycache__/        # Ignores Python cache directories
